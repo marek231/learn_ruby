@@ -1,7 +1,7 @@
 class String
   def pigify
     split(/ /).map do |word|
-      starting_consonants = word.slice!(/^[^aeiouy]*u?/)
+      starting_consonants = word.slice!(/^[^aeiouy]?qu|^[^aeiouy]*/i)
       word << starting_consonants << 'ay'
     end.join(' ')
   end
