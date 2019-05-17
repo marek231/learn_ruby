@@ -40,21 +40,21 @@ describe "Timer" do
     end
   end
 
-
   # One way to implement the Timer is with a helper method.
   # Uncomment these specs if you want to test-drive that
   # method, then call that method from inside of time_string.
   #
-  # describe 'padded' do
-  #   it 'pads zero' do
-  #     @timer.padded(0).should == '00'
-  #   end
-  #   it 'pads one' do
-  #     @timer.padded(1).should == '01'
-  #   end
-  #   it "doesn't pad a two-digit number" do
-  #     @timer.padded(12).should == '12'
-  #   end
-  # end
+  describe 'padded' do
+    it 'pads zero' do
+      @timer.padded(0).should == '00'
+    end
 
+    it 'pads one' do
+      @timer.padded(1).should == '01'
+    end
+
+    it "doesn't pad a two-digit number" do
+      @timer.padded(12).should == '12'
+    end
+  end
 end
